@@ -205,7 +205,6 @@ def get_experiments_for_model(model_filter: str):
             for scenario in FUSION_SCENARIOS:
                 
                 exp_name = f"{model_config['display_name']}_{text_name}_{scenario['display_name']}"
-                current_special_tokens = BASE_SETTINGS["special_tokens"]
                 
                 config = ExperimentSettings(
                     experiment_name=exp_name,
@@ -219,7 +218,6 @@ def get_experiments_for_model(model_filter: str):
                     fusion_head_layers=fusion_head_layers_small,
                     model_type='cls',
                     **BASE_SETTINGS,
-                    special_tokens=current_special_tokens
                 )
                 experiments.append(config)
     
