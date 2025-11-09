@@ -11,6 +11,7 @@ from transformers import get_linear_schedule_with_warmup, PreTrainedModel
 from sklearn.metrics import classification_report, roc_auc_score
 from sklearn.feature_selection import SelectKBest, f_classif
 from tqdm import tqdm
+from dataclasses import asdict
 
 # Importaciones internas del paquete
 from .config import ExperimentSettings
