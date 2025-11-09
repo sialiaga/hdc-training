@@ -171,10 +171,16 @@ BASE_SETTINGS = {
     "conjunto_name": "experiments_full_factorial_v1",
     "text_file_path": "./data/PPR_1_data_transcription.csv",
     "tab_file_path": "./data/TAB_0_data_text_audio.csv",
-    
     "target_col": "FT__REAJUSTE",
     "split_col": "set",
-    "patience": 3,
+    "num_classes": 2,
+    "max_len": 512,
+    "special_tokens": ["<captador>", "<cliente>", "<organizacion>", "<telefono>", "<correo>", "<rut>", "<monto>"],
+    "seed": 42,
+    "epochs": 20,
+    "batch_size": 32,
+    "learning_rate": 2e-5,
+    "patience": 2,
     "min_delta": 0.001,
 }
 
