@@ -65,7 +65,7 @@ BASE_SETTINGS = {
     "target_col": "FT__REAJUSTE",
     "split_col": "set",
     "num_classes": 2,
-    "max_len": 64,
+    "max_len": 16,
     "special_tokens": ["<captador>", "<cliente>", "<organizacion>", "<telefono>", "<correo>", "<rut>", "<monto>"],
     "seed": 42,
     "epochs": 1,
