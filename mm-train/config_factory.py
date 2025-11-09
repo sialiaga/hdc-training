@@ -167,16 +167,13 @@ FUSION_SCENARIOS = [
 
 # --- 3. CONFIGURACIÓN BASE ---
 BASE_SETTINGS = {
-    # ⚠️ ¡Recuerda poner tus rutas ABSOLUTAS aquí! ⚠️
-    "results_base_folder": "/home/tu_usuario/proyecto_tesis/results",
+    "results_base_folder": "./results",
     "conjunto_name": "experiments_full_factorial_v1",
-    "text_file_path": "/home/tu_usuario/proyecto_tesis/data/PPR_1_data_transcription.csv",
-    "tab_file_path": "/home/tu_usuario/proyecto_tesis/data/TAB_0_data_text_audio.csv",
+    "text_file_path": "./data/PPR_1_data_transcription.csv",
+    "tab_file_path": "./data/TAB_0_data_text_audio.csv",
     
-    # --- El resto de la config ---
     "target_col": "FT__REAJUSTE",
     "split_col": "set",
-    # ... (el resto de tu config base) ...
     "patience": 3,
     "min_delta": 0.001,
 }

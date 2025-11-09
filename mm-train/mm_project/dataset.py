@@ -28,6 +28,6 @@ class MultimodalDataset(Dataset):
         return {
             'input_ids': encoding['input_ids'].flatten(),
             'attention_mask': encoding['attention_mask'].flatten(),
-            'tabular_data': torch.tensor(self.tabular_data[idx], dtype: torch.float),
+            'tabular_data': torch.tensor(self.tabular_data[idx], dtype= torch.float),
             'label': torch.tensor(self.labels[idx], dtype=torch.long)
         }

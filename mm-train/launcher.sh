@@ -11,7 +11,7 @@
 #SBATCH --time=36:00:00
 #SBATCH --output=logs/mm_train_BERT_Multilingual-%A_%a.out
 #SBATCH --error=logs/mm_train_BERT_Multilingual-%A_%a.err
-#SBATCH --mail-user=tu_correo@universidad.cl
+#SBATCH --mail-user=sialiaga@miuandes.cl
 #SBATCH --mail-type=BEGIN,END,FAIL
 
 # --- 2. CAPTURAR ARGUMENTO DE MODELO ---
@@ -32,19 +32,21 @@ echo "======================================="
 export TELEGRAM_BOT_TOKEN=8199209755:AAEOg5uoQ0rUixAL9EntGTs32JQWK7L9xOE
 export TELEGRAM_CHAT_ID=878432149
 
+echo "Limpiando..."
 mkdir -p logs
 module purge
 
-# --- ¡EDITAR AQUÍ! ---
-module load python/3.13
+echo "Cargando Python..."
+module load python/3.10
+
+echo "Cargando CUDA 12.0..."
 module load CUDA/12.0.0
-# ---------------------
 
-echo "Entorno de Python cargado:"
-which python
+echo "Activando entorno virtual..."
+source venv/bin/activate
 
-# --- 3. EJECUCIÓN DEL SCRIPT DE PYTHON ---
-echo "Iniciando script de Python: hpc_run_task.py"
+
+echo "Iniciando script de Python: run_task.py"
 
 python run_task.py \
     --task-id $SLURM_ARRAY_TASK_ID \
