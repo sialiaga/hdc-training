@@ -68,7 +68,7 @@ BASE_SETTINGS = {
     "max_len": 16,
     "special_tokens": ["<captador>", "<cliente>", "<organizacion>", "<telefono>", "<correo>", "<rut>", "<monto>"],
     "seed": 42,
-    "epochs": 1,
+    "epochs": 2,
     "batch_size": 4,
     "learning_rate": 2e-5,
     "patience": 1,
