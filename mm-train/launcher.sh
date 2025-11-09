@@ -29,7 +29,7 @@ echo "Modelo: $MODEL_NAME"
 echo "======================================="
 
 # --- CONFIGURACIÓN DE TELEGRAM ---
-export TELEGRAM_BOT_TOKEN=8199209755:AAEOg5uoQ0rUixAL9EntGTs32JQWK7L9xOE
+export TELEGRAM_BOT_TOKEN=8199209755:AAHVdvGsoKrLuAd1Ckv2hQqySK8TKtjC3Ls
 export TELEGRAM_CHAT_ID=878432149
 
 echo "Limpiando..."
