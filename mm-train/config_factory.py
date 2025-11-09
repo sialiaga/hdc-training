@@ -27,54 +27,54 @@ fusion_head_layers_small = [
 
 # --- 2. DEFINICIÓN DE EJES EXPERIMENTALES ---
 MODELS_TO_RUN = [
-    # {
-    #     "display_name": "BETO",
-    #     "model_name": "dccuchile/bert-base-spanish-wwm-uncased",
-    #     "model_class": BertModel,
-    #     "tokenizer_class": BertTokenizer,
-    # },
-    # {
-    #     "display_name": "XLM-R",
-    #     "model_name": "FacebookAI/xlm-roberta-base",
-    #     "model_class": XLMRobertaModel,
-    #     "tokenizer_class": XLMRobertaTokenizer,
-    # },
-    # {
-    #     "display_name": "Tulio",
-    #     "model_name": "dccuchile/tulio-chilean-spanish-bert",
-    #     "model_class": BertModel,
-    #     "tokenizer_class": BertTokenizer,
-    # },
+    {
+        "display_name": "BETO",
+        "model_name": "dccuchile/bert-base-spanish-wwm-uncased",
+        "model_class": BertModel,
+        "tokenizer_class": BertTokenizer,
+    },
+    {
+        "display_name": "XLM-R",
+        "model_name": "FacebookAI/xlm-roberta-base",
+        "model_class": XLMRobertaModel,
+        "tokenizer_class": XLMRobertaTokenizer,
+    },
+    {
+        "display_name": "Tulio",
+        "model_name": "dccuchile/tulio-chilean-spanish-bert",
+        "model_class": BertModel,
+        "tokenizer_class": BertTokenizer,
+    },
     {
         "display_name": "BERT_Multilingual",
         "model_name": "google-bert/bert-base-multilingual-uncased",
         "model_class": BertModel,
         "tokenizer_class": BertTokenizer,
     },
-    # {
-    #     "display_name": "RoBERTa_base",
-    #     "model_name": "FacebookAI/roberta-base",
-    #     "model_class": RobertaModel,
-    #     "tokenizer_class": AutoTokenizer,
-    # },
-    # {
-    #     "display_name": "BERT_base_uncased",
-    #     "model_name": "google-bert/bert-base-uncased",
-    #     "model_class": BertModel,
-    #     "tokenizer_class": BertTokenizer,
-    # },
-    # {
-    #     "display_name": "ModernBERT_base",
-    #     "model_name": "answerdotai/ModernBERT-base",
-    #     "model_class": AutoModel,
-    #     "tokenizer_class": AutoTokenizer,
-    # },
-    # {
-    #     "display_name": "ModernBERT_multi",
-    #     "model_name": "neavo/modern_bert_multilingual",
-    #     "model_class": AutoModel,
-    #     "tokenizer_class": AutoTokenizer,
-    # }
+    {
+        "display_name": "RoBERTa_base",
+        "model_name": "FacebookAI/roberta-base",
+        "model_class": RobertaModel,
+        "tokenizer_class": AutoTokenizer,
+    },
+    {
+        "display_name": "BERT_base_uncased",
+        "model_name": "google-bert/bert-base-uncased",
+        "model_class": BertModel,
+        "tokenizer_class": BertTokenizer,
+    },
+    {
+        "display_name": "ModernBERT_base",
+        "model_name": "answerdotai/ModernBERT-base",
+        "model_class": AutoModel,
+        "tokenizer_class": AutoTokenizer,
+    },
+    {
+        "display_name": "ModernBERT_multi",
+        "model_name": "neavo/modern_bert_multilingual",
+        "model_class": AutoModel,
+        "tokenizer_class": AutoTokenizer,
+    }
 ]
 
 TEXT_SOURCES = {
