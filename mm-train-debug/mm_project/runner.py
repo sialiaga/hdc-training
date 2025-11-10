@@ -52,9 +52,9 @@ class ExperimentRunner:
         df = pd.merge(df_text, df_tab_unique, on='ID_LLAMADA', how='inner')
         all_tabular_features = [col for col in df_tab.columns if col != 'ID_LLAMADA']
         
-        df_train = df[df[config.split_col] == 'TRAIN'].copy()
-        df_val = df[df[config.split_col] == 'VAL'].copy()
-        df_test = df[df[config.split_col] == 'TEST'].copy()
+        df_train = df[df[config.split_col] == 'TRAIN'].copy().head(1000)
+        df_val = df[df[config.split_col] == 'VAL'].copy().head(250)
+        df_test = df[df[config.split_col] == 'TEST'].copy().head(250)
         
         y_train = df_train[config.target_col].values
         y_val = df_val[config.target_col].values
