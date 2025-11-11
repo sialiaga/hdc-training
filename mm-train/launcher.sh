@@ -34,19 +34,22 @@ export TELEGRAM_CHAT_ID=878432149
 
 echo "Limpiando..."
 mkdir -p logs
+
+# --- 3. CONFIGURACIÓN DEL ENTORNO DE EJECUCIÓN ---
+echo "Cargando stack de módulos (Intel + CUDA)..."
 module purge
+module load intel/2019b     
+module load CUDA/12.0.0    
 
-echo "Cargando Intel..."
-module load intel/2019b
-
-echo "Cargando Python..."
-module load python/3.10
-
-echo "Cargando CUDA 12.0..."
-module load CUDA/12.0.0
-
-echo "Activando entorno virtual..."
+echo "Activando entorno virtual 'venv_intel'..."
+# 3. Activa el venv que construiste con estos módulos
 source venv_intel/bin/activate
+
+echo "Módulos cargados:"
+module list
+echo "Python en uso:"
+which python
+python -V
 
 
 echo "Iniciando script de Python: run_task.py"
