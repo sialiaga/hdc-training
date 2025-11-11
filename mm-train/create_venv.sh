@@ -1,24 +1,33 @@
 #!/bin/bash
 #SBATCH --job-name=build_venv
-#SBATCH --partition=general        
-#SBATCH --cpus-per-task=8        
-#SBATCH --mem-per-cpu=8G        
+#SBATCH --partition=general
+#SBATCH --cpus-per-task=8
+#SBATCH --mem-per-cpu=8G
 #SBATCH --time=01:00:00
 #SBATCH --output=logs/build_env.out
 #SBATCH --error=logs/build_env.err
 
 echo "--- ¡Iniciando construcción de VENV en un nodo 'general' (Intel Xeon)! ---"
 
-# 1. Carga los módulos en el orden correcto
 module purge
 module load intel/2019b     
-module load python/3.10    
-module load CUDA/12.0.0   
+module load CUDA/12.0.0    
 
 echo "Módulos cargados:"
 module list
 
-# 5. Actívalo
+echo "Ruta de Python (debería ser de 'intel/2019b'):"
+which python
+
+echo "Versión de Python:"
+python -V 
+
+echo "Eliminando venv_intel antiguo..."
+rm -rf venv_intel
+
+echo "Creando venv_intel..."
+python -m venv venv_intel
+
 echo "Activando venv..."
 source venv_intel/bin/activate
 
