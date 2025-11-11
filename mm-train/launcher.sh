@@ -36,6 +36,9 @@ echo "Limpiando..."
 mkdir -p logs
 module purge
 
+echo "Cargando Intel..."
+module load intel/2019b
+
 echo "Cargando Python..."
 module load python/3.10
 
@@ -43,7 +46,7 @@ echo "Cargando CUDA 12.0..."
 module load CUDA/12.0.0
 
 echo "Activando entorno virtual..."
-source venv/bin/activate
+source venv_intel/bin/activate
 
 
 echo "Iniciando script de Python: run_task.py"
