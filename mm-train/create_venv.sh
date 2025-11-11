@@ -18,16 +18,6 @@ module load CUDA/12.0.0
 echo "Módulos cargados:"
 module list
 
-# 2. Navega al directorio del proyecto (asumiendo que ejecutas desde él)
-# cd /home/saliaga/hdc-training/mm-train
-
-echo "Eliminando venv_intel antiguo..."
-rm -rf venv_intel
-
-# 4. Crea el venv nuevo (ahora se construye en el CPU Intel)
-echo "Creando venv_intel..."
-python3 -m venv venv_intel
-
 # 5. Actívalo
 echo "Activando venv..."
 source venv_intel/bin/activate
